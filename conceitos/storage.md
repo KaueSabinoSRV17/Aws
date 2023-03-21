@@ -101,3 +101,8 @@ vamos precisar atender ao menos um dos seguintes requisitos:
 
 Ao seguir o método por Roles Entre-Contas do IAM, basta criar a Role com acesso ao S3 na conta dona do 
 S3, entrar na conta que irá consumir o S3 e mudar a Role da conta para a criada.
+
+## Transfer Acceleration
+
+Este serviço acelera a transferência do Bucket, pois ele faz uso das Edge Locations do 
+CloudFront mais próximas do Cliente.
