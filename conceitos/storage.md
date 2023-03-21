@@ -29,6 +29,9 @@ acima de regras definidas por Objeto).
 
 Objetos Públicos inplicam em uma URL de acesso livre ao arquivo em questão.
 
+É possível adicionar um MFA ao deletar arquivos, muito útil para garantir que 
+apenas os usuários certos podem fazer esta exclusão.
+
 ### Bucket Policies
 
 Caso queiramos estabelecer Policies ao Bucket, a configuração é sempre feita no formato JSON.
