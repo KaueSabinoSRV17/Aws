@@ -82,3 +82,14 @@ E:
 Se não houver nenhum erro, você pode reiniciar a instância para aplicar todas as alterações e depois entrar de novo:
 
 	sudo reboot
+
+## Encripitando Volume Root de uma EC2
+
+Para fazer isso, devemos:
+
+- parar a EC2 do Volume.
+- Criar um snapshot do Volume.
+- Copie o Snapshot, dessa vez encriptado.
+- Criar Volume com o Snapshot, na mesma Zona.
+- Faça o Detach do Volume que está sendo usado pela EC2.
+- Faça o Atach do Volume, especificando a Instância e o EXATAMENTE o mesmo disco que estava o volume anterior.
