@@ -65,3 +65,15 @@ Uma vez ligado, não é possível voltar para "não versionado", apenas é poss�
 
 Vale ressaltar que o Acesso de um Objeto é ditado pelo ID de Versão, ou seja, após tornar a versão atual pública,
 a próxima versão não irá herdar o Acesso público. Para cada versão, devemos configurar o acesso separadamente.
+
+## Lifecycle
+
+É possível estabelecer rotinas baseadas em eventos dentro do S3. Estas ações podem ser: 
+
+- Transition actions: Quando um Objeto muda de para outra Classe Storage.
+- Expiration actions: Quando Objetos expiram.
+
+OBS: Podemos escolher se vamos aplicar para versões correntes e anteriores para ambas.
+
+Pode ser que você receba um aviso de que as regras de Lifecycle estão conflitantes, apesar 
+de estar ok. Revise bem antes de criar o Lifecycle.
