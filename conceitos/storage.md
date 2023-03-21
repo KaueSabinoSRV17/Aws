@@ -89,3 +89,15 @@ Ao rodar a replicação, podemos determinar se a Classe de Storage, Dono do Arqu
 vão mudar no destino do arquivo.
 
 É importante salientar que o Bucket não será replicado até que haja um novo upload no Bucket.
+
+## Acesso Entre Contas
+
+É possível ter acesso entre serviços de S3 de diferentes contas. Para que isso seja possível, 
+vamos precisar atender ao menos um dos seguintes requisitos:
+
+- Policies baseados em Recursos e AWS Identity and Acess.
+- Lista de Controle de Acesso baseada em Recursos e Policies do IAM.
+- Roles do IAM Entre-Contas (o mais simples de ser implementado).
+
+Ao seguir o método por Roles Entre-Contas do IAM, basta criar a Role com acesso ao S3 na conta dona do 
+S3, entrar na conta que irá consumir o S3 e mudar a Role da conta para a criada.
