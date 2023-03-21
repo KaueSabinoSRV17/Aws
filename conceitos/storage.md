@@ -77,3 +77,13 @@ OBS: Podemos escolher se vamos aplicar para versões correntes e anteriores para
 
 Pode ser que você receba um aviso de que as regras de Lifecycle estão conflitantes, apesar 
 de estar ok. Revise bem antes de criar o Lifecycle.
+
+## Replicação
+
+É um serviço assíncrono (não instantâneo) que sincroniza os arquivos de dois Buckets.
+
+Muitas vezes isso é necessário não por necesssidade, mas por Lei!
+
+Vale destacar que para usar a Replicação, o Bucket obrigatoriamente deve estar versionado!
+Ao rodar a replicação, podemos determinar se a Classe de Storage, Dono do Arquivo, entre outros,
+vão mudar no destino do arquivo.
