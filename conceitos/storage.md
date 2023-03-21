@@ -87,3 +87,5 @@ Muitas vezes isso é necessário não por necesssidade, mas por Lei!
 Vale destacar que para usar a Replicação, o Bucket obrigatoriamente deve estar versionado!
 Ao rodar a replicação, podemos determinar se a Classe de Storage, Dono do Arquivo, entre outros,
 vão mudar no destino do arquivo.
+
+É importante salientar que o Bucket não será replicado até que haja um novo upload no Bucket.
