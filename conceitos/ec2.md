@@ -59,6 +59,20 @@ Garantindo que a chave está permissionada corretamente, podemos agora nos conec
 
 É possível estabelecer um Bash Script que vai ser rodado ao botar a EC2.
 
+## Imagens
+
+Para salvar tempo e replicar todo o ambiente criado em uma EC2 para outra,
+podemos fazer uma Imagem AMI da mesma.
+
+Um dos casos de uso mais interessantes é migrar todo uma EC2 de uma região
+para outra. Para isso, é seguido os seguintes passos:
+
+- Parar EC2.
+- Fazer Imagem.
+- Copiar Imagem para outra Região.
+- Lançar Instância com Imagem.
+- Adicionar Security Groups (Provavelmente não estarão na nova região).
+
 ## Meta Data
 
 Informações que podem ser obtidas da EC2, acessando a URL http://<ip da EC2>/latest/meta-data/
