@@ -27,3 +27,8 @@ Agora, realize a montagem:
 	sudo mount -t efs <id do efs>:/ <caminho até a pasta destino>
 
 **OBS: O código de exemplo da AWS não está ajustado com o próprio id do seu EFS!**
+
+## Extras
+
+- FSx: File System para o Windows (O EFS funciona apenas em Unix).
+- Lustre: File System dedicado a alta performance, recomendado apenas para Linux.
