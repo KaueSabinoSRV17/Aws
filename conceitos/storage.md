@@ -18,3 +18,18 @@ Uma classe de Storage define o preço de armazenamento de cada Objeto. Quanto ma
 tempo podemos levar para realizar a leitura do Objeto.
 
 Portanto, devemos pagar mais para arquivos altamente lidos, e economizar com arquivos raramente lidos.
+
+## Acesso
+
+Por padrão, todo o acesso aos Objetos de um Bucket são restritos, ou seja, apenas quem tem acesso a Console é capaz
+de ler e gravar os arquivos de um Bucket.
+
+Podemos definir o nível de acesso ao nível de Objeto ou ao nível de Bucket (Regras definidas no Bucket estão 
+acima de regras definidas por Objeto).
+
+Objetos Públicos inplicam em uma URL de acesso livre ao arquivo em questão.
+
+### Bucket Policies
+
+Caso queiramos estabelecer Policies ao Bucket, a configuração é sempre feita no formato JSON.
+A AWS disponibiliza oficialmente os templates para as principais configurações usadas.
