@@ -33,3 +33,19 @@ Objetos Públicos inplicam em uma URL de acesso livre ao arquivo em questão.
 
 Caso queiramos estabelecer Policies ao Bucket, a configuração é sempre feita no formato JSON.
 A AWS disponibiliza oficialmente os templates para as principais configurações usadas.
+
+## Segurança
+
+Por padrão, toda a comunicação com o storage é feito através da criptografia SSL, através do 
+HTTPS.
+
+É possível gerenciar você mesmo a encriptação dos arquivos no Client Side, ou também feito 
+Server Side
+
+Ao encriptar no Server Side, podemos deixar a AWS gerenciar a criptografia (Também é possível
+deixar a cargo da AWS, mas escolher com qual chave os arquivos devem ser encriptados).
+
+### Responsabilidade
+
+A responsabilidade da AWS é apenas gerenciar toda a infraestrutura da Nuvem. Os arquivos
+guardados no S3 são estritamente de nossa responsabilidade!
