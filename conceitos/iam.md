@@ -6,7 +6,7 @@ Podemos estipular acessos tanto para usuários humanos quanto para um recurso qu
 
 ## Boas Práticas
 
-- Não criar uma conta para cada usuário, e sim um usuário para cada conta.
+- Não criar uma conta para cada usuário, e sim vários usuários em uma mesma conta.
 - Dar permissões granulares para cada usuário.
 - Implementar Autenticação Multi Fator.
 - Guardar com muito sigílo a senha de usuário Root.
