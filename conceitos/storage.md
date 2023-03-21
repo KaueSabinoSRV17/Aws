@@ -49,3 +49,16 @@ deixar a cargo da AWS, mas escolher com qual chave os arquivos devem ser encript
 
 A responsabilidade da AWS é apenas gerenciar toda a infraestrutura da Nuvem. Os arquivos
 guardados no S3 são estritamente de nossa responsabilidade!
+
+## Versionamento
+
+O Versionamento é uma função do S3 que permite guardarmos versões diferentes de um mesmo objeto.
+
+Ao fazer o upload de um arquivo com um nome de outro já existente, a versão do arquivo é atualizada
+e vamos ter ambos guardados no S3.
+
+Há 3 estágios para o Versionamento de um Bucket. "não versionado", "versionamento ligado" e "versionamento suspenso".
+Uma vez ligado, não é possível voltar para "não versionado", apenas é possível passar para "versionamento suspenso".
+
+Vale ressaltar que o Acesso de um Objeto é ditado pelo ID de Versão, ou seja, após tornar a versão atual pública,
+a próxima versão não irá herdar o Acesso público. Para cada versão, devemos configurar o acesso separadamente.
