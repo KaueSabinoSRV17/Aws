@@ -29,3 +29,13 @@ Para permissionar corretamente um recurso ao RDS, devemos adicionar a
 ele um Security Group descrevendo a porta e tipo de conexão 
 `Mysql/Aurora` e depois editar o mesmo Security Group para permitir o 
 acesso a quem estiver dentro dele mesmo.
+
+## Extras
+
+### Redshift
+
+É um serviço de banco de dados no modelo Data Warehouse.
+
+### DynammoDB
+
+É um banco de dados noSQL provisionado pela AWS.
