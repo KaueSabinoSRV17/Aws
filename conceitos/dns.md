@@ -19,3 +19,15 @@ Depois de lançar o serviço do Route53, podemos testar se o
 mesmo realmente está apontando para dentro da AWS.
 
 	dig ns <endereço desejado>
+
+## Policy Routing
+
+Podemos estabelecer Políticas de Roteamento para os endereços
+de DNS no Route53.
+
+Entre outros, é possível estabelcer:
+
+- Simples: Apenas resolve um endereço para um IP.
+- Com Peso: Podemos atribuir pesos diferentes para os IPs, fazendo com que um atenda mais que o outro.
+- Failover: É necessário ativar um Health Check. A partir de um Health Check, estabelecemos rotas primárias e de Back Up.
+- Latência: Também é interessante usar com Health Check. Podemos direcionar para o servidor mais próximo à requisição.
