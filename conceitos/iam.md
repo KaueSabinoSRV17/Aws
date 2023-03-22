@@ -19,3 +19,9 @@ Podemos estipular acessos tanto para usuários humanos quanto para um recurso qu
 - Rotacione chaves com frequência.
 - Use Policy Conditions para segurança extra.
 - Monitore a sua atividade na conta da AWS.
+
+## Identiy Federation
+
+Com um Federation você é capaz de gerir recursos de forma centralizada, usando um Único Sign In (SSO)
+para acessar suas contas AWS com credenciais do seu diretório corporativo. Federations usam
+padrões abertos, como o Security Assertion Markup Language 2.0 (SAML).
