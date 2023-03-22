@@ -28,6 +28,16 @@ apenas um Internet Gateway.
 quando criamos uma nova VPC. Dentro desta Tabela, precisamos settar como
 targeto o Internet Gateway criado.
 
+## Security Groups
+
+Security Groups são uma forma de configuração de firewalls na VPC.
+
+Em um Security Group, não é possível colocar regras de bloqueio, 
+apenas regras de permissionamento, e caso tenhamos bloqueado toda
+a entrada, mas liberado a saída, a entreda, vinda de um comunicação
+para a saída permitida, será permitida também (isso ocorre pois
+Security Groups são Statefull).
+
 ## Público X Privado
 
 ### Público Acessando Privado
