@@ -11,3 +11,6 @@ comando:
 
 Isso vai pedir os dados copiados da criação do usuário do IAM. Estes
 dados são a `Secret Key` e a `Acess Key`.
+
+**OBS: É possível dar permissão para uma EC2 usar a CLI sem as Keys,
+através das Roles do IAM**
