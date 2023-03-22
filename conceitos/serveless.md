@@ -9,3 +9,5 @@ serviços da AWS ou até mesmo a chamadas HTTP.
 
 É um modelo que permite o teste das Lambdas localmente, antes
 de realizar o deploy na AWS.
+
+**OBS: Ela tem uma CLI separada da AWS, a AWS SAM CLI.**
