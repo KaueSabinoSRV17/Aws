@@ -9,4 +9,5 @@ comando:
 
 	aws configure
 
-Isso vai pedir os dados copiados da criação do usuário do IAM.
+Isso vai pedir os dados copiados da criação do usuário do IAM. Estes
+dados são a `Secret Key` e a `Acess Key`.
