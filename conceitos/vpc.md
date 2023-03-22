@@ -70,3 +70,18 @@ Em uma VPC é possível associar logs ao CloudWatch e também ao S3.
 É um serviço que provê conexão direta a rede da AWS através de 
 pontos de acesso específicos ao redor do planeta. É necessário
 criar na Console e realmente implementar a conexão fisicamente.
+
+## Endpoint
+
+Um Endpoint para as VPCs garante que a comunicação entre recursos
+da AWS não saiam da rede da AWS. 
+
+Por padrão, sem usar os IPs internos, os recursos vão até a Internet
+e ai sim chegam em outros recursos.
+
+### Tipos
+
+Ele pode ser implementado em 2 tipos:
+
+- Interface.
+- Gateway (Apenas S3 e DynamoDB).
