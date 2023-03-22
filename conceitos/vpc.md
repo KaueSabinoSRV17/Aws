@@ -65,6 +65,10 @@ Para granular o acesso a VPC, podemos usar as ACLs.
 Com elas, podemos determinar regras de entrada e saida da rede, que tem total
 precedência sobre os Security Groups.
 
+Elas não são Stateful como Security Groups. Isso significa que caso seja
+necessário garantir uma comunicação, precisamos configurar as regras de
+entrada e também de saída.
+
 As requisições feitas a uma VPC não passam por todas as regras de ACL, elas 
 parão na regra que atende a elas. Portanto, podemos ter ao mesmo tempo uma
 regra que proibe o acesso SSH de todos os IPs, e uma regra que permite IPs
