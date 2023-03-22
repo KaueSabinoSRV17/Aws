@@ -79,3 +79,13 @@ Informações que podem ser obtidas da EC2, acessando a URL http://<ip da EC2>/l
 (É necessário fazer a requisição estando dentro da VM, via `curl` por exemplo).
 
 **OBS: Também existe a rota http://<ip da EC2>/latest/user-data/, para pegar informações de user como o boot script**
+
+## Auto Scaling
+
+É um serviço que permite aumentar ou diminuir o parque de EC2 conforme o uso. Caso haja 
+sobrecarga, será aumentado até o limite estipulado por você.
+
+É preciso definir um template para todas as máquinas do Grupo de Auto Scaling.
+Depois de definir este grupo, caso queiramos coloca-lo em um Load Balancer
+basta criar um Target Group, vincular o Target Group ao Grupo de Scaling e 
+apontar o Load Balancer para o Target Group.
