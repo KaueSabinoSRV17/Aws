@@ -30,13 +30,16 @@ targeto o Internet Gateway criado.
 
 ## Security Groups
 
-Security Groups são uma forma de configuração de firewalls na VPC.
+Security Groups são uma forma de permissionamento de firewalls na VPC.
 
 Em um Security Group, não é possível colocar regras de bloqueio, 
 apenas regras de permissionamento, e caso tenhamos bloqueado toda
 a entrada, mas liberado a saída, a entreda, vinda de um comunicação
 para a saída permitida, será permitida também (isso ocorre pois
 Security Groups são Statefull).
+
+Eles apenas disponibilizam regras de acesso a recursos e instâncias,
+e não para toda a rede.
 
 ## Público X Privado
 
@@ -63,7 +66,8 @@ para o NAT Gateway criado.
 Para granular o acesso a VPC, podemos usar as ACLs.
 
 Com elas, podemos determinar regras de entrada e saida da rede, que tem total
-precedência sobre os Security Groups.
+precedência sobre os Security Groups, pois elas são aplicadas a nível de rede,
+não a nível de recurso ou instância.
 
 Elas não são Stateful como Security Groups. Isso significa que caso seja
 necessário garantir uma comunicação, precisamos configurar as regras de
