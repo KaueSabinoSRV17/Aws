@@ -59,3 +59,7 @@ parão na regra que atende a elas. Portanto, podemos ter ao mesmo tempo uma
 regra que proibe o acesso SSH de todos os IPs, e uma regra que permite IPs
 específicos. Caso o IP bata em uma regra específica dele, a regra que proibe
 todos não vale para ele.
+
+## Vpc Flow Log
+
+Em uma VPC é possível associar logs ao CloudWatch e também ao S3.
