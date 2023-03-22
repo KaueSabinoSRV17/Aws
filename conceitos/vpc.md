@@ -46,3 +46,16 @@ Um detalhe importantíssimo é que o NAT Gateway deve ser criado na rede
 pública. Após a sua criação, precisamos editar a Tabela de Rotas da 
 rede privada e adicionar uma rota de 0.0.0.0/0 (toda a Web) apontando
 para o NAT Gateway criado.
+
+## Network ACLs
+
+Para granular o acesso a VPC, podemos usar as ACLs.
+
+Com elas, podemos determinar regras de entrada e saida da rede, que tem total
+precedência sobre os Security Groups.
+
+As requisições feitas a uma VPC não passam por todas as regras de ACL, elas 
+parão na regra que atende a elas. Portanto, podemos ter ao mesmo tempo uma
+regra que proibe o acesso SSH de todos os IPs, e uma regra que permite IPs
+específicos. Caso o IP bata em uma regra específica dele, a regra que proibe
+todos não vale para ele.
