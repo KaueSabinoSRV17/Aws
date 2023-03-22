@@ -34,6 +34,7 @@ targeto o Internet Gateway criado.
 
 Para que recursos de uma rede Privada sejam acessíveis por recursos de uma
 Rede Pública, devemos configurar ambos os recursos no mesmo Security Group
+(isso é chamado de Bastion host).
 
 ### Privado acessando a Web
 
@@ -63,3 +64,9 @@ todos não vale para ele.
 ## Vpc Flow Log
 
 Em uma VPC é possível associar logs ao CloudWatch e também ao S3.
+
+## Direct Connect
+
+É um serviço que provê conexão direta a rede da AWS através de 
+pontos de acesso específicos ao redor do planeta. É necessário
+criar na Console e realmente implementar a conexão fisicamente.
