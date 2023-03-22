@@ -34,3 +34,15 @@ targeto o Internet Gateway criado.
 
 Para que recursos de uma rede Privada sejam acessíveis por recursos de uma
 Rede Pública, devemos configurar ambos os recursos no mesmo Security Group
+
+### Privado acessando a Web
+
+Por padrão, uma rede privada não é capaz de acessar a Web.
+
+Para isso, precisamos implementar um NAT Gateway. Ele garante que o recurso
+consiga acessar a Web, mas barra o caminho contrário.
+
+Um detalhe importantíssimo é que o NAT Gateway deve ser criado na rede 
+pública. Após a sua criação, precisamos editar a Tabela de Rotas da 
+rede privada e adicionar uma rota de 0.0.0.0/0 (toda a Web) apontando
+para o NAT Gateway criado.
