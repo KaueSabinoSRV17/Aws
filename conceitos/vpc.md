@@ -43,6 +43,18 @@ e não para toda a rede.
 
 ## Público X Privado
 
+Dentro de uma VPC, podemos definir Sub Redes, que serão públicas ou
+privadas.
+
+- Públicas: Até 1 por ZD.
+- Privadas: Até 2 por ZD.
+
+Vale ressaltar que podemos ter mais de uma Sub Rede em cada ZD.
+
+Essencialmente, o que separa uma rede Pública de uma Privada é que
+uma Pública possue um Internet Gateway para que haja o acesso da 
+Web a ela e vice-versa.
+
 ### Público Acessando Privado
 
 Para que recursos de uma rede Privada sejam acessíveis por recursos de uma
