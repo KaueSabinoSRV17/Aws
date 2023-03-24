@@ -21,6 +21,9 @@ mínimo para 0.
 Podemos separar toda a orquestração de microserviço em tarefas, que 
 rodam a partir da defininição dos containeres.
 
+É nela que devemos definir portas, redes do Docker, que tipo de Cluster
+vamos usar, etc.
+
 ## Serviços
 
 É a definição da infraestrutura que fica por trás das Tarefas, como um
