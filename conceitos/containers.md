@@ -30,3 +30,11 @@ Load Balancer e o Auto Scaling por exemplo.
 
 São as máquinas, gerenciadas por você ou não, que vão rodar os Serviços
 e Tarefas.
+
+## ECR
+
+É um registro de Imagens Privado que é englobado no Free Tier.
+
+Nele também é possível estabelecer Políticas de Ciclo de Vida,
+que vão garantir que não seja acumulado muitas tags, prefixos
+de tags, etc.
