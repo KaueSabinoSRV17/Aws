@@ -1,0 +1,12 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Primeiro Template escrito à mão
+Resources:
+  WebServerInstance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-00169914e6299b8e0
+      InstanceType: t2.micro
+      Tags:
+        - 
+          Key: Name
+          Value: Formation Labs
