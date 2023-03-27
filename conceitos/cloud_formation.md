@@ -33,6 +33,17 @@ depender de outra. Esta ordem é:
 - Recursos: Define todos os recursos.
 - Outputs: Estes Outputs vão para o Console ou o resultado do comando na CLI. Podem ser usados também como um recurso Inter-Stack.
 
+### Funções Intrínsicas
+
+Funções Intrínsicas são funções padrões do Formation para gerenciar as Stacks.
+
+São usadas para preencher valores durante o um Runtime como criar ou 
+atualizar.
+
+#### Função Ref
+
+Retorna o valor de um Recurso ou Parâmetro ao receber o ID Lógico.
+
 ## Stack
 
 Sao usadas para gerir uma coleção de recursos relacionados. Para criar, deletar
