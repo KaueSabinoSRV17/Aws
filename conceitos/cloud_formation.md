@@ -33,6 +33,16 @@ depender de outra. Esta ordem é:
 - Recursos: Define todos os recursos.
 - Outputs: Estes Outputs vão para o Console ou o resultado do comando na CLI. Podem ser usados também como um recurso Inter-Stack.
 
+### Update
+
+Devemos nos atentar ao procedimento feito em um Update. Em alguns casos,
+apesar de não parecer intuitivo, o Cloud Formation vai deletar recursos
+ao invés de alterar existentes.
+
+Por exemplo uma EC2: Caso não haja subnet definida no Template para ela,
+toda alteração resultará em uma nova instância, não uma alteração da
+existente.
+
 ### Funções Intrínsicas
 
 Funções Intrínsicas são funções padrões do Formation para gerenciar as Stacks.
