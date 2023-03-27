@@ -11,6 +11,8 @@ Resources:
         - 
           Key: Name
           Value: Formation Labs
+      SecurityGroupIds:
+        - !Ref WebServerSecurityGroup
 
   WebServerSecurityGroup:
     Type: AWS::EC2::SecurityGroup
