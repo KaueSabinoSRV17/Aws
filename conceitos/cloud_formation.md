@@ -59,7 +59,18 @@ O seu tipo será obrigatório são:
 - Systems Manager Parameter Store.
 
 É possível determinar constraints, como o tamanho máximo de uma String, e também
-um valor padrão.
+um valor padrão (vale lembrar que o valor padrão também será validado pelas
+constraints definidas).
+
+#### Parâmetros Específicos da AWS
+
+A AWS fornece uma série de Tipos específicos de Parâmetros que referenciam os principais
+recursos, como VPCs e subnets. Ao popular na criação da Stack, teremos um select box apenas
+com os valores válidos dos recursos da nossa conta, o que tira a possibilidade de erros.
+
+#### Pseudo Parâmetros
+
+São Parâmetros padrões que podemos acessar, como ID da Conta, Região, etc.
 
 ### Funções Intrínsicas
 
