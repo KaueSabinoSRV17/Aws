@@ -43,6 +43,24 @@ Por exemplo uma EC2: Caso não haja subnet definida no Template para ela,
 toda alteração resultará em uma nova instância, não uma alteração da
 existente.
 
+### Parâmetros
+
+Parâmetros são úteis para definir valores personalizados ao criar ou atualizar stacks.
+Eles só podem ser usados nas seções de Recursos e Output, através da função Ref, que
+vai receber o seu nome como argumento.
+
+O seu tipo será obrigatório são:
+
+- String.
+- Number.
+- List<Number>.
+- CommaDelimitedList.
+- AWS-Specific Parameter Types.
+- Systems Manager Parameter Store.
+
+É possível determinar constraints, como o tamanho máximo de uma String, e também
+um valor padrão.
+
 ### Funções Intrínsicas
 
 Funções Intrínsicas são funções padrões do Formation para gerenciar as Stacks.
