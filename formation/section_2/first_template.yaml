@@ -1,6 +1,7 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: Primeiro Template escrito à mão
 Resources:
+
   WebServerInstance:
     Type: AWS::EC2::Instance
     Properties:
@@ -10,3 +11,18 @@ Resources:
         - 
           Key: Name
           Value: Formation Labs
+
+  WebServerSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Web Acess
+      SecurityGroupIngress:
+        - 
+          IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+          CidrIp: "0.0.0.0/0"
+      Tags:
+          -
+            Key: Name
+            Value: Web Server Security Group
