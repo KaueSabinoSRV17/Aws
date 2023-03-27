@@ -19,6 +19,20 @@ regiões e contas.
 
 São escritos em YAML.
 
+Podemos ter até 9 seções em um Template, sendo a "Resources" a única obrigatória.
+Ñão é necessário seguir uma ordem, mas é uma boa prática, pois uma seção pode 
+depender de outra. Esta ordem é:
+
+- Versão: Determina a versão do Formation a ser usada.
+- Descrição.
+- Metadata: Detalhes adicionais sobre o Template, como algumas configurações específicas.
+- Parâmetros: Passa valores durante a execução de uma criação ou atualização de uma Stack. Promove reusabilidade em Recursos e Outputs.
+- Mappings.
+- Condições.
+- Transform: Usado para configurar recursos Serveless
+- Recursos: Define todos os recursos.
+- Outputs: Estes Outputs vão para o Console ou o resultado do comando na CLI. Podem ser usados também como um recurso Inter-Stack.
+
 ## Stack
 
 Sao usadas para gerir uma coleção de recursos relacionados. Para criar, deletar
