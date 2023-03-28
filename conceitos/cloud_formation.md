@@ -148,5 +148,12 @@ Uma Stack só pode ter um Template, porém, um Template pode criar diversas Stac
 
 ## Change Sets
 
-É um resumo de suas mudanças que deverá aparecer antes de elas serem implementadas
-em produção.
+É uma foram alternativa de atualizar suas Stacks. Usando este recurso, podemos ver
+uma previsção do que exatamente vai acontecer antes de executar a alteração.
+Isso garante que nada fora do planejado irá acontecer.
+
+é possível criar mais de um Change Set, mas ao executar um deles, todos serão deletados.
+
+Vale lembrar que um Change Set não prevê todas as falhas que podem acontecer ao executar,
+e assim como um Update comum, todas as mudanças bem sucedidas serão desfeitas caso uma delas
+dê erro.
