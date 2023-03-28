@@ -26,7 +26,7 @@ depender de outra. Esta ordem é:
 - Versão: Determina a versão do Formation a ser usada.
 - Descrição.
 - Metadata: Detalhes adicionais sobre o Template, como algumas configurações específicas.
-- Parâmetros: Passa valores durante a execução de uma criação ou atualização de uma Stack. Promove reusabilidade em Recursos e Outputs.
+- Parâmetros
 - Mappings.
 - Condições.
 - Transform: Usado para configurar recursos Serveless
@@ -71,6 +71,62 @@ com os valores válidos dos recursos da nossa conta, o que tira a possibilidade 
 #### Pseudo Parâmetros
 
 São Parâmetros padrões que podemos acessar, como ID da Conta, Região, etc.
+
+### Metadata
+
+Região onde podemos determinar informações adicionais sobre o nosso template.
+
+Geralmante apps de terceiros, a própria interface do CloudFormation usam esta
+seção e os nosso Parâmetros podem fazer uso do que está definido em Metadata.
+
+### Condições
+
+Podemos estipular uma seção para condições em nossos Templates.
+Para avaliar as condições, podemos referenciar via `!Ref` um 
+Parâmetro, Pseudo-Parâmetro, Mapping e outras Condições.
+Nesta seção há algumas Funções Intrínsicas:
+
+#### Equals
+
+Recebe um valor e o compara com outro. Retorna `true` se forem iguais e `false´
+se forem diferentes.
+
+### Not
+
+Inverte o valor de uma Condição.
+
+### And
+
+Recebe duas condições, e retorna `true` se ambas forem `true` e
+`false` se ambas forem `false`.
+
+### Or
+
+Recebe duas condições e retorna `true` caso apenas uma seja `true`
+e `false` caso apenas uma seja `false`.
+
+### If
+
+Recebe uma condição, um valor que será assumido caso a condição
+recebida seja `true` e outro valor caso a condição recebida seja
+`false`.
+
+Esta é a única Função Condicional que pode ser usada fora da seção
+Conditions do Template.
+
+### Outputs
+
+Nesta seção podemos definir a sáida da Stack criada com o Template.
+Esta saída pode referênciar qualquer coisa criada dentro da Stack
+e também pode ser usada em Templates Multi-Stack para proporcionar
+uma Stack maior gerenciada entre Múltiplos Templates.
+
+Temos um limite máximo de 60 Outputs.
+
+#### Função GetAtt
+
+Caso seja necessário ter um parâmetro específico, podemos usar a 
+`GetAtt`, que recebe um recurso, e o nome do atributo a ser retornado.
 
 ### Funções Intrínsicas
 
