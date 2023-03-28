@@ -1,0 +1,26 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Template que coloca meu teste de Docker no ar
+Resources:
+
+  Cluster:
+    Type: AWS::ECS::Cluster
+    Properties:
+      ClusterName: chat-app-cluster-2
+
+  TaskDefinition:
+    Type: AWS::ECS::TaskDefinition
+    Properties:
+      ContainerDefinitions:
+        - Image: dockerkaue17/chat-app:latest
+          Name: chat-app-container
+          Memory: 500
+          PortMappings:
+            - ContainerPort: 3000
+
+  Service:
+    Type: AWS::ECS::Service
+    Properties: 
+      Cluster: !Ref Cluster
+      TaskDefinition: !Ref TaskDefinition
+      DesiredCount: 1
+
