@@ -1,0 +1,11 @@
+AWSTemplateFormatVersion: 2010-09-09
+Resources:
+
+  HostingZone:
+    Type: AWS::Route53::HostedZone
+    Properties:
+      Name: kaueaws.shop
+
+# Outputs:
+#   NameServers:
+#     Value: !GetAtt 'HostingZone.NameServers'
